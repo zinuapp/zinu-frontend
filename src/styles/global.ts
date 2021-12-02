@@ -11,10 +11,12 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
     font-size: 16px;
+    margin: 0;
 }
 h1,h2{
     font-family: 'Inter', sans-serif;
