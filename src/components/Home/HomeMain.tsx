@@ -14,16 +14,18 @@ const HomeComponent: React.FC = () => {
         <div>
             <Header></Header>
             <BodyContent>
-                <div className='page-map'>
-                    <MapContainer
-                        center={location}
-                        zoom={15}
-                        style={{ width: "100%", height: "100%" }}
-                    >
-                        <TileLayer 
-                            url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGNzZGV2cyIsImEiOiJja3dtcHc2bXUyZWR5MnZubzcxMGNmMTgzIn0.QZAK-exntAinLz5ylt8U4Q`}
-                        />
-                    </MapContainer>
+                <div className='content'>
+                    <div className='page-map'>
+                        <MapContainer
+                            center={location}
+                            zoom={15}
+                            style={{ width: "100%", height: "100%" }}
+                         >
+                            <TileLayer 
+                                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGNzZGV2cyIsImEiOiJja3dtcHc2bXUyZWR5MnZubzcxMGNmMTgzIn0.QZAK-exntAinLz5ylt8U4Q`}
+                            />
+                        </MapContainer>
+                    </div>
                 </div>
             </BodyContent>
         </div>
