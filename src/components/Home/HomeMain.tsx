@@ -1,8 +1,11 @@
 import React, { FormEvent, useState , useContext, useRef, useEffect, useCallback } from 'react';
 import { BodyContent, Header } from './HomeMainStyle'
 
+import AddressModal from '../AdressModal/AddressModal';
+
 import "leaflet/dist/leaflet.css"
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+
 import Leaflet from "leaflet";
 
  const initialPosition = { lat: -19.917299, lng: -43.934559 };
@@ -14,7 +17,7 @@ const HomeComponent: React.FC = () => {
         <div>
             <Header></Header>
             <BodyContent>
-                <div className='content'>
+                <div>
                     <div className='page-map'>
                         <MapContainer
                             center={location}
@@ -25,6 +28,9 @@ const HomeComponent: React.FC = () => {
                                 url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibGNzZGV2cyIsImEiOiJja3dtcHc2bXUyZWR5MnZubzcxMGNmMTgzIn0.QZAK-exntAinLz5ylt8U4Q`}
                             />
                         </MapContainer>
+                    </div>
+                    <div>
+                        <AddressModal />
                     </div>
                 </div>
             </BodyContent>

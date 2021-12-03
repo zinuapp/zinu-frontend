@@ -8,7 +8,7 @@ export const Header = styled.header`
      justify-content: center;
     align-content: center;
     padding: ${pixelToRem(64)} ${pixelToRem(10)} 0;
-    background-color: black;
+    background-color: ${theme.colors.button};
 `;
 
 export const BodyContent = styled.div`
@@ -18,17 +18,13 @@ export const BodyContent = styled.div`
   align-content: center;
   height: 100%;
 
-   .content {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
 
-      .page-map {
-        display: flex;
-        justify-content: flex-start;
-        width: 100vw;
-        height: 100vh;
-      }
+ .page-map {
+     display: flex;
+     justify-content: flex-start;
+    width: 100vw;
+     height: 100vh;
+    }
 
   @media (min-width: 998px) { 
 

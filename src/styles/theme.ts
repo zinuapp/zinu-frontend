@@ -6,7 +6,8 @@ const theme = {
     rectangle: '#F2F5F8',
     button: '#3D485F',
     error: '#C3CBD5',
-    warn: '#C64D32'
+    warn: '#C64D32',
+    header: '#000'
   }
 }
 
