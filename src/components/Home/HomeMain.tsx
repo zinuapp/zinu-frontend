@@ -38,7 +38,7 @@ const HomeComponent: React.FC = () => {
         onOpen: () => console.log(`Connected`),
         onMessage: () => {
           
-            sendMessage("GET_LOCATION$CAR_1")
+           sendMessage("GET_LOCATION$CAR_1")
            sendMessage("GET_LOCATION$CAR_2")
            sendMessage("GET_LOCATION$CAR_3")
            sendMessage("GET_LOCATION$CAR_4")
