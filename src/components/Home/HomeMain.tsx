@@ -37,13 +37,12 @@ const HomeComponent: React.FC = () => {
     const { lastMessage, sendMessage } = useWebSocket('wss://zinu-passenger-ikwha.ondigitalocean.app/ws/passenger', {
         onOpen: () => {
             console.log(`Connected`)
-           sendMessage("GET_LOCATION$CAR_1")  
-        },
-        onMessage: () => {
+           sendMessage("GET_LOCATION$CAR_1")
            sendMessage("GET_LOCATION$CAR_2")
            sendMessage("GET_LOCATION$CAR_3")
-           sendMessage("GET_LOCATION$CAR_4")
-
+           sendMessage("GET_LOCATION$CAR_4")  
+        },
+        onMessage: () => {
             if (lastMessage) {
                 let data = lastMessage.data;
 
