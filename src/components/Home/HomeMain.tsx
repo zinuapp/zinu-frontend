@@ -69,7 +69,7 @@ const HomeComponent: React.FC = () => {
         },
            onError: (event) => { console.error(event); },
            shouldReconnect: (closeEvent) => true,
-           reconnectInterval: 3000
+           reconnectInterval: 30000
     });
 
     return (
