@@ -34,10 +34,11 @@ const HomeComponent: React.FC = () => {
     const [carThree, setCarThree]  = useState([]);
     const [carFour, setCarFour]  = useState([]);
 
-    const { lastMessage, sendMessage } = useWebSocket('ws://zinu-passenger-ikwha.ondigitalocean.app/ws/passenger', {
+    const { lastMessage, sendMessage } = useWebSocket('wss://zinu-passenger-ikwha.ondigitalocean.app/ws/passenger', {
         onOpen: () => console.log(`Connected`),
         onMessage: () => {
-           sendMessage("GET_LOCATION$CAR_1")
+          
+            sendMessage("GET_LOCATION$CAR_1")
            sendMessage("GET_LOCATION$CAR_2")
            sendMessage("GET_LOCATION$CAR_3")
            sendMessage("GET_LOCATION$CAR_4")
@@ -68,7 +69,7 @@ const HomeComponent: React.FC = () => {
         },
            onError: (event) => { console.error(event); },
            shouldReconnect: (closeEvent) => true,
-           reconnectInterval: 30000
+           reconnectInterval: 3000
     });
 
     return (
