@@ -2,8 +2,6 @@ import { useContext, useState, useEffect, useRef, useCallback } from 'react';
 
 import { AddressContainer } from '../AdressModal/AddressModalStyle';
 
-import { Location } from '../../models/Location';
-
 import { OpenStreetMapProvider } from 'leaflet-geosearch';
 
 const AddressModal: React.FC = () => { 
@@ -67,7 +65,7 @@ const AddressModal: React.FC = () => {
                     <input 
                         className='container-search'
                         type='text'
-                        placeholder={isFrom ? 'Add a pickup location' : 'Enter your destination'}
+                        placeholder={isFrom ? 'Adicione o endereço de origem' : 'Adicione o destino'}
                         onChange={onInputChanged}
                         ref={searchRef}
                     />
